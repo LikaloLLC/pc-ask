@@ -71,22 +71,9 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116930058-4"></script>
   <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA - 116930058 - 3");</script>
 
+{% block header %}
 
-    <title>Easily create and publish dynamic software documentation</title>
-    <meta name="description"
-    content="Technical Documentation management platform featuring translations and versioning">
-    <meta name="keywords"
-    content="knowledge base, software documentation, dynamic content, wysiwyg editor,knowledge base software,simple cms,content management software">
-   <!-- Twitter Card data -->
-
-  <meta name="twitter:title" content="Knowledge Base and Software Documentation management platform">
-  <meta name="twitter:description"
-    content="Knowledge Base and Software Documentation management platform featuring translations and versioning">
-    <meta property="og:title" content="Knowledge Base and Software Documentation management platform" />
-    <meta property="og:description"  content="Software Documentation management platform featuring translations and versioning" />
-  <link href="https://www.docsie.io/docsie.css" rel="stylesheet">
-  <link media="all" href="https://www.docsie.io/documentation/modern_docsie.css" rel="stylesheet" />
-
+  {% endblock header %}
 
 </head>
 
@@ -101,7 +88,7 @@
           </svg></a>
         <ul class="pure-menu-list">
 
-          
+          {% block menu %}
           <li class="pure-menu-item pure-menu-selected">
             <a href="/" class="pure-menu-link">Home</a>
           </li>
@@ -118,7 +105,7 @@
             </div>
           </li>
         </ul>
-         
+         {% endblock menu %}
 
         <ul class="pure-menu-list pure-menu-mobile">
           <li class="pure-menu-item">
@@ -173,10 +160,8 @@
       <div class="content" data-ddsroot style="padding-top: 6em;">
       </div>
 
-        
-
-<script async="" type="text/javascript" src="https://lib.docsie.io/1.4.5/service.js" data-docsie="test_pk_5ygXPGT9UxZzqfkCkCnuPzuN:boo_Io89ECQ6FBxvdwO3c,navigation:true,articleDate:true,viewportWidth:100%,enumeration:true,sectionAnchor:true,version:false,language:true"></script>
-
+        {% block content %}
+  {% endblock content %}
 
     </main>
 
@@ -280,8 +265,8 @@
   <script type="text/javascript" src="https://www.docsie.io/load_functions.js"></script>
 
 
-    
-  
+    {% block javascript %}
+  {% endblock javascript %}
 
 </body>
 
